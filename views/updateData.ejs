@@ -1,0 +1,116 @@
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Form Basic</h4>
+                <div class="ms-auto text-end">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Library
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form class="form-horizontal" action="/admin/updateUser" method="post">
+                        <input type="hidden" name="id" value="<%= single.id %>">
+                        <div class="card-body">
+                            <h4 class="card-title">Personal Info</h4>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-end control-label col-form-label">
+                                    Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        value="<%= single.name %>" placeholder="Name Here" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-end control-label col-form-label">E-mail</label>
+                                <div class="col-sm-9">
+                                    <input type="email" id="email" name="email" value="<%= single.email %>"
+                                        class="form-control" placeholder="Email Here" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Contact
+                                    No</label>
+                                <div class="col-sm-9">
+                                    <input type="number" name="number" value="<%= single.number %>" class="form-control"
+                                        id="number" placeholder="(+91) 00 0000 0000" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-3 text-end control-label col-form-label">Gender</label>
+                                <div class="col-sm-9 mt-2">
+                                    <input type="radio" name="gender" id="radio" value="male" 
+                                    <% if(single.gender == 'male'){ %>
+                                        <%= 'checked' %>
+                                        <% } %>/> Male
+                                    <input type="radio" name="gender" id="radio" value="female" 
+                                    <% if(single.gender == 'female'){ %>
+                                        <%= 'checked' %>
+                                        <% } %>/> Female
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cono1"
+                                    class="col-sm-3 text-end control-label col-form-label">Message</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="message"><%= single.message %></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-top">
+                            <div class="card-body">
+                                <button type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- editor -->
+       
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+    </div>
